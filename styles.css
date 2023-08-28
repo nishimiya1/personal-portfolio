@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&family=Chakra+Petch&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    overflow-x: hidden;
+   
+}
+.head-title,.head-name,.head-body,.head-tag,section{
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.navbar-nav, .header{
+    font-family: 'Chakra Petch', sans-serif;
+}
+body, footer{
+    background-color: #0a192f;
+}
+#logo{
+    width: 110px;
+    height: 80px;
+}
+.nav-item{
+    color: #586080;
+}
+.container {    
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px ;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+.head-name{
+    color: #ccd8f8;
+    font-size: 98px;
+}
+.head-tag{
+    color: #8892b0;
+    font-size: 85px;
+}
+.head-title{
+    font-size: 28px;
+}
+.head-body{
+    color: #485870;
+    font-size: 20px;
+}
+span,.head-title,.footer{
+    color: var(--bs-success);
+}
+.hidden {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(-100%);
+    filter: blur(5px);
+}
+.show{
+    filter: blur(0);
+    opacity: 1;
+    transform: translateX(0);
+}
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+#About{
+    font-size: 98px;
+}
+.subtitle{
+    font-size: 20px;
+    color: #ccd8f8
+}
+.photos, .img{
+    max-width: 100%;
+    width: 110px;
+    height: 80px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
+}
+.owl-nav .owl-next,.owl-nav .owl-prev{
+    opacity: 0;
+ 
+}
+
+@media only screen and (max-width: 767px){
+    .navbar-nav {
+        text-align: center;
+    }
+    .body-header{
+        font-size: 32px;
+    }
+
+}
+form{
+    background: rgba(27,31,34,0.80);
+    width: 640px;
+    margin: 50px auto;
+    max-width: 97%;
+    border-radius: 4px;
+    padding: 55px 30px;
+
+}
+form .title h2{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    letter-spacing: 6px;
+    border-bottom: 1px solid white;
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 32px;
+}
+form .half .item{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    width: 48%;
+
+}
+form label{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    display: block;
+    font-size: 13px;
+    letter-spacing: 3.5px;
+    margin-bottom: 16px;
+}
+form .half .item input{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding: 16px;
+    width: 100%;
+    height: 44px;
+    color: white;
+    background: transparent;
+}
+form .full{
+    margin-bottom: 24px;
+}
+form .full textarea{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding: 12px 16px;
+    width: 100%;
+    height: 200px;
+    font-size: 17px;
+    color: white;
+}
+form .action{
+    margin-bottom: 32px;
+}
+form .action input{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    height: 44px;
+    letter-spacing: 3px;
+    outline: 0;
+    padding: 0 20px 0 22px;
+}
+form .action input[type="submit"]{
+    
+    background: white;
+    color: black;
+}
+form .half .item input:focus, form .full textarea:focus, form .action input[type="submit"]:hover{
+    background: rgb(255, 255, 255,0.075);
+}
+@media(max-width:480px){
+    form .half{
+        flex-direction: column;
+    }
+    form .half .item{
+        width: 100%;
+    }
+    form .action{
+        display: flex;
+        flex-direction: column;
+    }
+    form .action input{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
