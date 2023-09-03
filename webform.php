@@ -1,6 +1,7 @@
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <?php
-
-    if(isset($_POST['email']) && $_POST['email'] !=''){
+include 'index.html';
+    if(isset($_POST['submit']) && $_POST['submit'] !=''){
         if(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
             $userName= $_POST['name'];
             $userEmail= $_POST['email'];
@@ -14,6 +15,18 @@
             $body.="Message:".$userMessage."\r\n";
 
             mail($to,$userEmail,$body);
+           
+            ?>
+            <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: 'Message Sent'
+                });
+
+            </script>
+            <?php
         }
     }
+   
 ?>
